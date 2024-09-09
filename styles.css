@@ -1,5 +1,21 @@
 body {
-	background-color: orangered;
+	/* Basic styling */
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #aaded3, #7abcca, #4ab7cb, #2d7a9d, #1e4d6d, #FFFFFF);
+  background-size: 300% 300%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
 }
 
 button {
