@@ -1,61 +1,132 @@
+/* Body background styling (now plain white) */
 body {
-	/* Basic styling */
   margin: 0;
   padding: 0;
   height: 100vh; /* Full viewport height */
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white; /* Plain white background */
+}
+
+/* Card container with gradient animation */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(45deg, #aaded3, #7abcca, #4ab7cb, #2d7a9d, #1e4d6d, #FFFFFF);
   background-size: 300% 300%;
   animation: gradientBG 15s ease infinite;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  transform: translateY(-150px);
 }
 
-/* Gradient animation */
+/* Gradient animation for the card */
 @keyframes gradientBG {
   0% { background-position: 0% 0%; }
   50% { background-position: 100% 100%; }
   100% { background-position: 0% 0%; }
 }
 
-button {
-      background-color: #f0f0f0; /* Soft background color */
-      border: 1px solid #ccc; /* Light border */
-      border-radius: 10px; /* Rounded corners */
-      padding: 10px 15px; /* Spacing around the icon */
-      cursor: pointer; /* Pointer cursor on hover */
-      transition: background-color 0.3s ease; /* Smooth hover effect */
-    }
+/* Weather box */
+.weather-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    /* Styling for the icon */
-    button i {
-      color: #555; /* Softer icon color */
-      font-size: 18px; /* Adjust icon size */
-    }
+.weather-icon {
+  width: 100%;
+  height: auto;
+}
 
-    /* Hover effect for the button */
-    button:hover {
-      background-color: #e0e0e0; /* Slightly darker on hover */
-    }
+/* Temperature and city name */
+.temperature-box, .city-name-box {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.city-name-box {
+  font-size: 30px; /* Slightly smaller for city name */
+}
+
+/* Humidity and Wind Speed */
+.weather-details {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Spacing between humidity and windspeed */
+  margin-top: 10px;
+}
+
+.humidity, .windspeed {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.value {
+  color: #f0f0f0;
+}
+
+/* Search box and button styling */
+.search {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: space-between;
+}
 
 input[type="text"] {
-      padding: 10px 15px;
-      border-radius: 10px; /* Rounded corners */
-      border: 1px solid #ccc; /* Light border */
-      background-color: #f0f0f0; /* Soft background color */
-      color: #555; /* Softer text color */
-      width: 300px; /* Adjust width as needed */
-      font-size: 16px; /* Font size */
-      outline: none; /* Remove outline on focus */
-      transition: background-color 0.3s ease, border-color 0.3s ease;
-    }
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  color: #555;
+  width: 300px;
+  font-size: 16px;
+  outline: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
 
-    /* Hover and focus effects for the input */
-    input[type="text"]:focus {
-      background-color: #e0e0e0; /* Slightly darker on focus */
-      border-color: #aaa; /* Change border color on focus */
-    }
+input[type="text"]:focus {
+  background-color: #e0e0e0;
+  border-color: #aaa;
+}
 
-    input[type="text"]::placeholder {
-      color: #999; /* Softer placeholder color */
-    }
+input[type="text"]::placeholder {
+  color: #999;
+}
+
+/* Button styling */
+button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button i {
+  color: #555;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}

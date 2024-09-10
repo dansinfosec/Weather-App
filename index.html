@@ -10,11 +10,27 @@
 
 </head>
 <body>
-	<div class="card">
-		<div class="search">
-			<input type="text" name="location-search-text-inputbox" placeholder="enter city name" spellcheck="false">
-			<button><i class="fa fa-search" aria-hidden="true"></i></button>
-		</div>
-	</div>
+<div class="card">
+    <div class="weather-box">
+      <img class="weather-icon" src="images/Stormy.png" alt="Weather icon">
+    </div>
+    <div class="temperature-box">22°C</div>
+    <div class="city-name-box">Tetouan, Mdiq</div>
+    <div class="weather-details">
+  <div class="humidity">
+    <span class="label">Humidity:</span>
+    <span class="value">60%</span>
+  </div>
+  <div class="windspeed">
+    <span class="label">Wind Speed:</span>
+    <span class="value">15 km/h</span>
+  </div>
+</div>
+    <div class="search">
+      <input type="text" name="location-search-text-inputbox" placeholder="Enter city name" spellcheck="false">
+      <button><i class="fa fa-search" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <script>checkWeather();</script>
 </body>
 </html>
