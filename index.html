@@ -1,36 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-	<script type="text/javascript" src="javascript/main.js"></script>
-	<title>JavaScript Weather Application</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>JavaScript Weather Application</title>
 </head>
 <body>
-<div class="card">
+  <div class="card">
     <div class="weather-box">
       <img class="weather-icon" src="images/Stormy.png" alt="Weather icon">
     </div>
     <div class="temperature-box">22°C</div>
-    <div class="city-name-box">Tetouan, Mdiq</div>
+    <div class="city">Tetouan, Mdiq</div>
     <div class="weather-details">
-  <div class="humidity">
-    <span class="label">Humidity:</span>
-    <span class="value">60%</span>
-  </div>
-  <div class="windspeed">
-    <span class="label">Wind Speed:</span>
-    <span class="value">15 km/h</span>
-  </div>
-</div>
+      <div class="humiditybox">
+        <span class="label">Humidity:</span>
+        <span class="humidity">60%</span>
+      </div>
+      <div class="windspeedbox">
+        <span class="label">Wind Speed:</span>
+        <span class="wind-speed">15 km/h</span>
+      </div>
+    </div>
     <div class="search">
-      <input type="text" name="location-search-text-inputbox" placeholder="Enter city name" spellcheck="false">
-      <button><i class="fa fa-search" aria-hidden="true"></i></button>
+      <input class="searchinput" type="text" placeholder="Enter city name" spellcheck="false">
+      <button class="searchbutton"><i class="fa fa-search" aria-hidden="true"></i></button>
     </div>
   </div>
-  <script>checkWeather();</script>
+
+  <script src="javascript/main.js"></script>
 </body>
 </html>
